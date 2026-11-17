@@ -1,0 +1,6 @@
+{
+  "name": "Women & Child Smart Emergency & Location Tracker",
+  "description": "A comprehensive smart emergency and location tracking application for women and children with SOS, real-time tracking, safe zones, and AI safety assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

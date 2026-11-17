@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "UserProfile": {
+      "collection": "users",
+      "document": "{userId}",
+      "fields": {
+        "userId": "string",
+        "name": "string",
+        "phone": "string",
+        "emergencyMessage": "string",
+        "medicalInfo": "string",
+        "guardianPin": "string",
+        "updatedAt": "timestamp"
+      }
+    },
+    "EmergencyContact": {
+      "collection": "users/{userId}/emergency_contacts",
+      "document": "{contactId}",
+      "fields": {
+        "userId": "string",
+        "name": "string",
+        "phone": "string",
+        "relationship": "string",
+        "priority": "number",
+        "createdAt": "timestamp"
+      }
+    },
+    "Incident": {
+      "collection": "users/{userId}/incidents",
+      "document": "{incidentId}",
+      "fields": {
+        "userId": "string",
+        "timestamp": "timestamp",
+        "latitude": "number",
+        "longitude": "number",
+        "address": "string",
+        "status": "string",
+        "notes": "string",
+        "createdAt": "timestamp"
+      }
+    },
+    "SafePlace": {
+      "collection": "safe_places",
+      "document": "{placeId}",
+      "fields": {
+        "name": "string",
+        "category": "string",
+        "address": "string",
+        "latitude": "number",
+        "longitude": "number",
+        "phone": "string",
+        "verified": "boolean",
+        "createdAt": "timestamp"
+      }
+    },
+    "DangerZone": {
+      "collection": "danger_zones",
+      "document": "{zoneId}",
+      "fields": {
+        "title": "string",
+        "description": "string",
+        "category": "string",
+        "latitude": "number",
+        "longitude": "number",
+        "radiusMeters": "number",
+        "reportedBy": "string",
+        "upvotes": "number",
+        "createdAt": "timestamp"
+      }
+    }
+  }
+}
