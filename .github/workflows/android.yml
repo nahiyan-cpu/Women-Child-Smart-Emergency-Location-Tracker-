@@ -25,6 +25,10 @@ jobs:
       with:
         accept-android-sdk-licenses: true
 
+    - name: Force Accept SDK Licenses
+      run: |
+        yes | sdkmanager --licenses || true
+
     - name: Set up Gradle
       uses: gradle/actions/setup-gradle@v3
       with:
